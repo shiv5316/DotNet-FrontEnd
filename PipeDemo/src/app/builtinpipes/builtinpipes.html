@@ -1,0 +1,55 @@
+<h2>🔹 Angular Built-in Pipes Demo</h2>
+
+<!-- STRING PIPES -->
+<h3>String Pipes</h3>
+<p>Original: {{ name }}</p>
+<p>Uppercase: {{ name | uppercase }}</p>
+<p>Lowercase: {{ name | lowercase }}</p>
+<p>Titlecase: {{ name | titlecase }}</p>
+
+<hr>
+
+<!-- DATE PIPE -->
+<h3>Date Pipe</h3>
+<p>Default: {{ today | date }}</p>
+<p>Short: {{ today | date:'short' }}</p>
+<p>Full Date: {{ today | date:'fullDate' }}</p>
+<p>Custom: {{ today | date:'dd/MM/yyyy' }}</p>
+
+<hr>
+
+<!-- NUMBER PIPES -->
+<h3>Number Pipes</h3>
+<p>Decimal: {{ num | number:'1.2-2' }}</p>
+<p>Percent: {{ percentValue | percent }}</p>
+<p>Currency (INR): {{ price | currency:'INR' }}</p>
+<p>Currency (USD): {{ price | currency:'USD' }}</p>
+
+<hr>
+
+<!-- JSON PIPE -->
+<h3>JSON Pipe</h3>
+<pre>{{ user | json }}</pre>
+
+<hr>
+
+<!-- SLICE PIPE -->
+<h3>Slice Pipe</h3>
+<p>Array Slice: {{ items | slice:1:4 }}</p>
+<p>String Slice: {{ name | slice:0:3 }}</p>
+
+<hr>
+
+<!-- KEYVALUE PIPE -->
+<h3>KeyValue Pipe</h3>
+<ul>
+  <li *ngFor="let item of user | keyvalue">
+    {{ item.key }} : {{ item.value }}
+  </li>
+</ul>
+
+<hr>
+
+<!-- CHAINING PIPES -->
+<h3>Chaining Pipes</h3>
+<p>{{ today | date:'fullDate' | uppercase }}</p>

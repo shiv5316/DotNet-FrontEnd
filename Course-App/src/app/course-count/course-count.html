@@ -1,0 +1,9 @@
+<h2>Course Count</h2>
+
+<p *ngIf="courses.length > 0; else noCourses">
+  Courses Available: {{ courses.length }}
+</p>
+
+<ng-template #noCourses>
+  <p>No Courses Found</p>
+</ng-template>

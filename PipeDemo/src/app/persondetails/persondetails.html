@@ -1,0 +1,22 @@
+<h2>Custom Pipe: Person Details</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Marital Status</th>
+      <th>Display Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let person of people">
+      <td>{{ person.name }}</td>
+      <td>{{ person.age }}</td>
+      <td>{{ person.gender }}</td>
+      <td>{{ person.maritalStatus }}</td>
+      <td>{{ person | salutation }}</td>
+    </tr>
+  </tbody>
+</table>

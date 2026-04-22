@@ -1,0 +1,29 @@
+<div class="list-header">
+  <h2>Student List</h2>
+  <button class="secondary" (click)="goToForm()">Add Student</button>
+</div>
+
+<div class="status" *ngIf="loading">Loading students...</div>
+
+<div class="status empty" *ngIf="!loading && students.length === 0">
+  No student records found.
+</div>
+
+<div class="table-wrap" *ngIf="!loading && students.length > 0">
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Department</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of students">
+        <td>{{ s.name }}</td>
+        <td>{{ s.age }}</td>
+        <td>{{ s.dept }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

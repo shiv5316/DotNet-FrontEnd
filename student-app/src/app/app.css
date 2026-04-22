@@ -1,0 +1,40 @@
+:host {
+	display: block;
+	min-height: 100vh;
+	padding: 24px;
+	background: linear-gradient(145deg, #f7fbff 0%, #eef5ff 45%, #fef9f2 100%);
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	box-sizing: border-box;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.app-shell {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.app-header {
+	margin-bottom: 16px;
+}
+
+.app-header h1 {
+	margin: 0;
+	font-size: 2rem;
+	color: #13335a;
+}
+
+.app-header p {
+	margin: 8px 0 0;
+	color: #4b607d;
+}
+
+.app-card {
+	background: #ffffff;
+	border: 1px solid #dbe8f8;
+	border-radius: 14px;
+	padding: 20px;
+	box-shadow: 0 10px 22px rgba(25, 53, 94, 0.08);
+}

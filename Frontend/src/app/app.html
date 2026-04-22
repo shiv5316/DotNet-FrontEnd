@@ -1,0 +1,34 @@
+<div style="padding:20px; max-width:500px; margin:auto">
+
+  <h2>Country-State Dropdown</h2>
+
+  <!-- Country Dropdown -->
+  <label>Select Country:</label>
+  <select [(ngModel)]="selectedCountryId" (change)="onCountryChange()">
+    <option [ngValue]="0">-- Select Country --</option>
+    <option *ngFor="let country of countries" [ngValue]="country.id">
+      {{ country.name }}
+    </option>
+  </select>
+
+  <br><br>
+
+  <!-- Loading -->
+  <div *ngIf="loading">Loading states...</div>
+
+  <!-- States List -->
+  <div *ngIf="!loading && states.length > 0">
+    <h3>States:</h3>
+    <ul>
+      <li *ngFor="let state of states">
+        {{ state.name }}
+      </li>
+    </ul>
+  </div>
+
+  <!-- No Data -->
+  <div *ngIf="!loading && selectedCountryId && states.length === 0">
+    No states found
+  </div>
+
+</div>

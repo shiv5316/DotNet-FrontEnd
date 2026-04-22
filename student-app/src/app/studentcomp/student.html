@@ -1,0 +1,23 @@
+<h2>Add Student</h2>
+
+<div class="form-grid">
+  <label>
+    Name
+    <input type="text" [(ngModel)]="student.name" placeholder="Enter name">
+  </label>
+
+  <label>
+    Age
+    <input type="number" [(ngModel)]="student.age" placeholder="Enter age">
+  </label>
+
+  <label>
+    Department
+    <input type="text" [(ngModel)]="student.dept" placeholder="Enter department">
+  </label>
+</div>
+
+<div class="actions">
+  <button class="primary" (click)="submit()">Submit</button>
+  <button class="secondary" (click)="goToList()">View/List</button>
+</div>

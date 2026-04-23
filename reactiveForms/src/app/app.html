@@ -1,0 +1,25 @@
+<h1>Task 1 - FormControl</h1>
+
+<input [formControl]="name" placeholder="Enter Name">
+
+<div *ngIf="name.touched && name.invalid">
+  Name is required
+</div>
+
+<p>Value: {{ name.value }}</p>
+<p>Valid: {{ name.valid }}</p>
+
+<hr>
+
+<h1>Task 2 - FormGroup</h1>
+<app-formgroup-demo></app-formgroup-demo>
+
+<hr>
+
+<h1>Task 3 - FormArray</h1>
+<app-formarray-demo></app-formarray-demo>
+
+<hr>
+
+<h1>Task 4 - FormBuilder</h1>
+<app-formbuilder-demo></app-formbuilder-demo>

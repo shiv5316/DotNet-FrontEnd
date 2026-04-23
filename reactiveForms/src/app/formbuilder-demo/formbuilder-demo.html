@@ -1,0 +1,12 @@
+<form [formGroup]="registerForm">
+
+<input formControlName="name" placeholder="Name">
+<br><br>
+
+<input formControlName="email" placeholder="Email">
+<br><br>
+
+<p>{{ registerForm.value | json }}</p>
+<p>Valid: {{ registerForm.valid }}</p>
+
+</form>

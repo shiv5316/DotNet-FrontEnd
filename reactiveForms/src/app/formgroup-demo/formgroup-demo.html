@@ -1,0 +1,72 @@
+<h2>Task 2 - FormGroup Full Example</h2>
+
+<form [formGroup]="loginForm" (ngSubmit)="submitForm()">
+
+  <!-- Email -->
+  <input type="text" formControlName="email" placeholder="Enter Email">
+  <br>
+
+  <div *ngIf="loginForm.controls.email.touched &&
+              loginForm.controls.email.errors?.['required']">
+    Email is required
+  </div>
+
+  <div *ngIf="loginForm.controls.email.touched &&
+              loginForm.controls.email.errors?.['email']">
+    Invalid Email
+  </div>
+
+  <br>
+
+  <!-- Password -->
+  <input type="password" formControlName="password" placeholder="Enter Password">
+  <br>
+
+  <div *ngIf="loginForm.controls.password.touched &&
+              loginForm.controls.password.errors?.['required']">
+    Password is required
+  </div>
+
+  <div *ngIf="loginForm.controls.password.touched &&
+              loginForm.controls.password.errors?.['minlength']">
+    Minimum 5 characters required
+  </div>
+
+  <br>
+
+  <button type="submit" [disabled]="loginForm.invalid">
+    Submit
+  </button>
+
+  <button type="button" (click)="resetForm()">
+    Reset
+  </button>
+
+  <button type="button" (click)="patchData()">
+    Patch Value
+  </button>
+
+  <button type="button" (click)="setData()">
+    Set Value
+  </button>
+
+</form>
+
+<hr>
+
+<h3>Form Values</h3>
+<p>{{ loginForm.value | json }}</p>
+
+<h3>Submitted Data</h3>
+<p>{{ submittedData | json }}</p>
+
+<hr>
+
+<h3>Properties</h3>
+
+<p>Valid: {{ loginForm.valid }}</p>
+<p>Invalid: {{ loginForm.invalid }}</p>
+<p>Touched: {{ loginForm.touched }}</p>
+<p>Untouched: {{ loginForm.untouched }}</p>
+<p>Dirty: {{ loginForm.dirty }}</p>
+<p>Pristine: {{ loginForm.pristine }}</p>

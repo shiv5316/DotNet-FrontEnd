@@ -1,0 +1,20 @@
+<form [formGroup]="myForm">
+
+<div formArrayName="skills">
+
+<div *ngFor="let item of skills.controls; let i=index">
+
+<input [formControlName]="i" placeholder="Enter Skill">
+<br><br>
+
+</div>
+
+</div>
+
+<button type="button" (click)="addSkill()">
+ Add Skill
+</button>
+
+<p>{{ myForm.value | json }}</p>
+
+</form>

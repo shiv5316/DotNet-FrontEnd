@@ -1,0 +1,16 @@
+<h2>User List</h2>
+
+<table border="1">
+<tr>
+  <th>ID</th>
+  <th>Password</th>
+  <th>Aadhar</th>
+</tr>
+
+<tr *ngFor="let u of users">
+  <td>{{u.userId}}</td>
+  <td>{{u.password}}</td>
+  <td>{{u.aadharNo}}</td>
+</tr>
+
+</table>
